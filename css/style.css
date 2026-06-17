@@ -40,74 +40,74 @@ padding:0;
 margin:0;
 }
 
-a{
-text-decoration:none;
-color:#2563eb;
+um {
+decoração-de-texto : nenhuma ;
+cor : #2563eb;
 }
 
-.hero{
-text-align:center;
-padding:100px 20px;
-background:linear-gradient(to bottom,#ffffff,#f8fafc);
+.herói {
+alinhamento-do-texto : ao centro ;
+preenchimento : 100 px  20 px ;
+fundo : gradiente-linear ( para  baixo , #ffffff, #f8fafc ) ;
 }
 
-.hero h1{
-font-size:48px;
-max-width:900px;
-margin:auto;
-margin-bottom:20px;
+.herói h1 {
+tamanho da fonte : 48 px ;
+largura máxima : 900 px ;
+margem : automática ;
+margem-inferior : 20 px ;
 }
 
-.hero p{
-max-width:700px;
-margin:auto;
-margin-bottom:30px;
-font-size:18px;
+.herói p {
+largura máxima : 700 px ;
+margem : automática ;
+margem-inferior : 30 px ;
+tamanho da fonte : 18 px ;
 }
 
-.button{
-background:#2563eb;
-color:white;
-padding:12px 24px;
-border-radius:8px;
-display:inline-block;
-font-weight:bold;
+.botão {
+fundo : #2563eb;
+cor : branca ;
+preenchimento : 12 px  24 px ;
+raio-da-borda : 8 px ;
+exibir : inline-block ;
+peso da fonte : negrito ;
 }
 
-.button:hover{
-opacity:.9;
+.button: passar o mouse {
+opacidade : 0,9 ;
 }
 
-#tools{
-padding:30px 20px;
+#ferramentas {
+preenchimento : 30 px  20 px ;
 }
 
-#tools h2{
-text-align:center;
-margin-bottom:30px;
+#ferramentas h2 {
+alinhamento-do-texto : ao centro ;
+margem-inferior : 30 px ;
 }
 
-.tools-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:20px;
-max-width:1200px;
-margin:auto;
+.tools-grid {
+exibição : grade ;
+grid-template-columns : repita ( ajuste automático , minmax ( 250 px , 1 fr ) ) ;
+espaço : 20 px ;
+preenchimento : 20 px ;
+largura máxima : 1200 px ;
+margem : automática ;
 }
 
-.tool-card{
-padding:30px;
-background:#f8fafc;
-border-radius:12px;
-text-align:center;
-font-weight:bold;
-transition:.3s;
-border:1px solid #e2e8f0;
+.tool-card {
+preenchimento : 30 px ;
+fundo : #f8fafc;
+raio da borda : 12 px ;
+alinhamento-do-texto : ao centro ;
+peso da fonte : negrito ;
+transição : 0,3 s ;
+borda : 1 px  sólida #e2e8f0;
 }
 
-.tool-card:hover{
-transform:translateY(-5px);
+.tool-card: passar o mouse {
+transformar : traduzirY ( -5 px ) ;
 box-shadow:0 10px 20px rgba(0,0,0,.08);
 }
 
@@ -175,5 +175,50 @@ font-size:16px;
 .content-section h2{
 font-size:28px;
 }
+
+}
+
+.content-section{
+
+max-width:1000px;
+margin:80px auto;
+padding:0 20px;
+line-height:1.8;
+
+}
+
+.content-section h2{
+
+font-size:40px;
+margin-bottom:30px;
+color:#1e293b;
+
+}
+
+.content-section h3{
+
+font-size:28px;
+margin-top:40px;
+margin-bottom:15px;
+color:#2563eb;
+
+}
+
+.content-section p{
+
+font-size:18px;
+margin-bottom:20px;
+
+}
+
+.faq{
+
+margin-top:80px;
+
+}
+
+.faq h3{
+
+font-size:24px;
 
 }
