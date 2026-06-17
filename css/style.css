@@ -1,120 +1,179 @@
 body{
-
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 background:#ffffff;
 color:#1e293b;
-
+line-height:1.7;
 }
 
 nav{
-
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 padding:20px 50px;
-
 box-shadow:0 2px 8px rgba(0,0,0,.05);
-
+background:#ffffff;
+position:sticky;
+top:0;
+z-index:100;
 }
 
 .logo{
-
 display:flex;
 align-items:center;
 gap:10px;
-
+font-weight:bold;
+font-size:20px;
 }
 
 .logo img{
-
 width:40px;
-
+height:40px;
+object-fit:contain;
 }
 
 ul{
-
 display:flex;
 list-style:none;
 gap:25px;
-
+padding:0;
+margin:0;
 }
 
 a{
-
 text-decoration:none;
 color:#2563eb;
-
 }
 
 .hero{
-
 text-align:center;
-padding:80px 20px;
-
+padding:100px 20px;
+background:linear-gradient(to bottom,#ffffff,#f8fafc);
 }
 
 .hero h1{
-
 font-size:48px;
+max-width:900px;
+margin:auto;
+margin-bottom:20px;
+}
 
+.hero p{
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+font-size:18px;
 }
 
 .button{
-
 background:#2563eb;
 color:white;
-
 padding:12px 24px;
-
 border-radius:8px;
+display:inline-block;
+font-weight:bold;
+}
 
+.button:hover{
+opacity:.9;
+}
+
+#tools{
+padding:30px 20px;
+}
+
+#tools h2{
+text-align:center;
+margin-bottom:30px;
 }
 
 .tools-grid{
-
 display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
-
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
-
-padding:40px;
-
+padding:20px;
+max-width:1200px;
+margin:auto;
 }
 
 .tool-card{
-
 padding:30px;
-
 background:#f8fafc;
-
 border-radius:12px;
-
 text-align:center;
-
 font-weight:bold;
-
 transition:.3s;
-
+border:1px solid #e2e8f0;
 }
 
 .tool-card:hover{
-
 transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
 
+.content-section{
+max-width:1000px;
+margin:auto;
+padding:60px 25px;
+}
+
+.content-section h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.content-section h3{
+margin-top:30px;
+font-size:22px;
+}
+
+.content-section p{
+font-size:17px;
+}
+
+.content-section ul{
+display:block;
+padding-left:25px;
+}
+
+.content-section li{
+margin-bottom:10px;
 }
 
 footer{
-
 text-align:center;
-
 padding:40px;
-
 background:#f1f5f9;
-
 margin-top:50px;
+}
 
-  }
+footer a{
+margin:0 5px;
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:15px;
+padding:20px;
+}
+
+ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.content-section h2{
+font-size:28px;
+}
+
+}
