@@ -1,0 +1,86 @@
+<!<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CPM Calculator - MonetizeMetrics</title><meta name="description" content="Free CPM Calculator. Estimate your advertising revenue based on CPM and impressions."><link rel="stylesheet" href="../css/style.css"></head><body><header><nav><div class="logo">
+<img src="../images/logo.png" alt="MonetizeMetrics Logo">
+<span>MonetizeMetrics</span>
+</div><ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul></nav></header><section class="content-section"><h1>CPM Calculator</h1><p>
+Calculate your estimated advertising revenue using CPM and impressions.
+</p><div class="calculator-box"><label>Impressions</label>
+<br>
+<input type="number" id="impressions" placeholder="100000">
+<br><br>
+
+<label>CPM ($)</label>
+<br>
+<input type="number" id="cpm" placeholder="5">
+<br><br>
+
+<button onclick="calculateCPM()" class="button">
+Calculate
+</button></div><br><div id="result"></div></section><section class="content-section"><h2>What is CPM?</h2><p>
+CPM (Cost Per Mille) represents the amount advertisers pay for every 1,000 impressions.
+It is one of the most important metrics in online advertising.
+</p><h2>How CPM Revenue Is Calculated</h2><p>
+Revenue = (Impressions ÷ 1000) × CPM
+</p><h2>Example</h2><p>
+100,000 impressions with a $5 CPM would generate approximately $500 in revenue.
+</p></section><section class="content-section"><h2>Frequently Asked Questions</h2><h3>Is this calculator free?</h3><p>Yes. Completely free.</p><h3>Is the estimate accurate?</h3><p>
+The calculation is mathematically accurate, but actual advertising revenue may vary depending on platform and audience.
+</p></section><footer><p>
+© 2026 MonetizeMetrics. All rights reserved.
+</p></footer><script>
+
+function calculateCPM(){
+
+let impressions =
+parseFloat(document.getElementById("impressions").value);
+
+let cpm =
+parseFloat(document.getElementById("cpm").value);
+
+if(isNaN(impressions) || isNaN(cpm)){
+
+document.getElementById("result").innerHTML =
+"<p>Please fill all fields.</p>";
+
+return;
+
+}
+
+let revenue =
+(impressions / 1000) * cpm;
+
+let daily =
+revenue / 30;
+
+let yearly =
+revenue * 12;
+
+document.getElementById("result").innerHTML =
+
+"<h2>Estimated Revenue</h2>" +
+
+"<p><strong>Total Revenue:</strong> $" +
+revenue.toFixed(2) +
+"</p>" +
+
+"<p><strong>Average Monthly Revenue:</strong> $" +
+revenue.toFixed(2) +
+"</p>" +
+
+"<p><strong>Average Daily Revenue:</strong> $" +
+daily.toFixed(2) +
+"</p>" +
+
+"<p><strong>Projected Yearly Revenue:</strong> $" +
+yearly.toFixed(2) +
+"</p>";
+
+}
+
+</script></body>
+</html>￼Enter
