@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YouTube Earnings Calculator - MonetizeMetrics</title>
+
+<meta name="description" content="Estimate YouTube earnings based on views and RPM.">
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+<img src="../images/logo.png" alt="MonetizeMetrics Logo">
+<span>MonetizeMetrics</span>
+</div>
+
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<section class="content-section">
+
+<h1>YouTube Earnings Calculator</h1>
+
+<p>
+Estimate your YouTube revenue using total views and RPM.
+</p>
+
+<div class="calculator-box">
+
+<label>Total Views</label>
+<br>
+<input type="number" id="views" placeholder="100000">
+<br><br>
+
+<label>RPM ($)</label>
+<br>
+<input type="number" id="rpm" placeholder="4">
+<br><br>
+
+<button onclick="calculateYouTube()" class="button">
+Calculate Earnings
+</button>
+
+</div>
+
+<div id="result"></div>
+
+</section>
+
+<section class="content-section">
+
+<h2>What is YouTube RPM?</h2>
+
+<p>
+RPM (Revenue Per Mille) represents how much a creator earns for every 1,000 views after YouTube's revenue share.
+</p>
+
+<h2>Formula</h2>
+
+<p>
+Revenue = (Views ÷ 1000) × RPM
+</p>
+
+<h2>Example</h2>
+
+<p>
+100,000 views with a $4 RPM generates approximately $400 in revenue.
+</p>
+
+</section>
+
+<section class="content-section">
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Is RPM the same as CPM?</h3>
+
+<p>
+No. CPM is what advertisers pay. RPM is what creators actually earn.
+</p>
+
+<h3>Why do RPM values vary?</h3>
+
+<p>
+RPM depends on niche, audience location, watch time, seasonality and advertiser demand.
+</p>
+
+<h3>Can this calculator predict exact earnings?</h3>
+
+<p>
+No. It provides an estimate based on the RPM entered.
+</p>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 MonetizeMetrics. All rights reserved.
+</p>
+
+</footer>
+
+<script>
+
+function calculateYouTube(){
+
+let views =
+parseFloat(document.getElementById("views").value);
+
+let rpm =
+parseFloat(document.getElementById("rpm").value);
+
+if(isNaN(views) || isNaN(rpm)){
+
+document.getElementById("result").innerHTML =
+"<p>Please fill all fields.</p>";
+
+return;
+
+}
+
+let revenue = (views / 1000) * rpm;
+
+let daily = revenue / 30;
+
+let yearly = revenue * 12;
+
+document.getElementById("result").innerHTML =
+
+"<h2>Estimated YouTube Earnings</h2>" +
+
+"<p><strong>Total Revenue:</strong> $" +
+revenue.toFixed(2) +
+"</p>" +
+
+"<p><strong>Average Monthly Revenue:</strong> $" +
+revenue.toFixed(2) +
+"</p>" +
+
+"<p><strong>Average Daily Revenue:</strong> $" +
+daily.toFixed(2) +
+"</p>" +
+
+"<p><strong>Projected Yearly Revenue:</strong> $" +
+yearly.toFixed(2) +
+"</p>";
+
+}
+
+</script>
+
+</body>
+</html>
