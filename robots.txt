@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://newstec661.github.io/monetizemetrics/sitemap.xml
