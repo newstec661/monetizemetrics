@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Affiliate Profit Calculator - MonetizeMetrics</title>
+
+<meta name="description" content="Calculate affiliate marketing profits, revenue and ROI.">
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+<img src="../images/logo.png" alt="MonetizeMetrics Logo">
+<span>MonetizeMetrics</span>
+</div>
+
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<section class="content-section">
+
+<h1>Affiliate Profit Calculator</h1>
+
+<p>
+Estimate affiliate revenue, profit and ROI based on commissions and advertising costs.
+</p>
+
+<div class="calculator-box">
+
+<label>Number of Sales</label>
+<br>
+<input type="number" id="sales" placeholder="100">
+<br><br>
+
+<label>Commission Per Sale ($)</label>
+<br>
+<input type="number" id="commission" placeholder="20">
+<br><br>
+
+<label>Advertising Cost ($)</label>
+<br>
+<input type="number" id="cost" placeholder="500">
+<br><br>
+
+<button onclick="calculateAffiliate()" class="button">
+Calculate Profit
+</button>
+
+</div>
+
+<div id="result"></div>
+
+</section>
+
+<section class="content-section">
+
+<h2>What is Affiliate Profit?</h2>
+
+<p>
+Affiliate profit is the money earned after subtracting advertising and operational costs from affiliate commissions.
+</p>
+
+<h2>Formula</h2>
+
+<p>
+Revenue = Sales × Commission
+</p>
+
+<p>
+Profit = Revenue − Cost
+</p>
+
+</section>
+
+<section class="content-section">
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Can I use this for any affiliate network?</h3>
+
+<p>
+Yes. It works for Digistore24, ClickBank, Amazon Associates and most affiliate programs.
+</p>
+
+<h3>Why should I track profit?</h3>
+
+<p>
+Revenue alone can be misleading. Profit shows whether your campaigns are truly generating money.
+</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 MonetizeMetrics. All rights reserved.</p>
+
+</footer>
+
+<script>
+
+function calculateAffiliate(){
+
+let sales =
+parseFloat(document.getElementById("sales").value);
+
+let commission =
+parseFloat(document.getElementById("commission").value);
+
+let cost =
+parseFloat(document.getElementById("cost").value);
+
+if(isNaN(sales) || isNaN(commission) || isNaN(cost)){
+
+document.getElementById("result").innerHTML =
+"<p>Please fill all fields.</p>";
+
+return;
+
+}
+
+let revenue = sales * commission;
+
+let profit = revenue - cost;
+
+let roi = (profit / cost) * 100;
+
+document.getElementById("result").innerHTML =
+
+"<h2>Results</h2>" +
+
+"<p><strong>Total Revenue:</strong> $" +
+revenue.toFixed(2) +
+"</p>" +
+
+"<p><strong>Total Profit:</strong> $" +
+profit.toFixed(2) +
+"</p>" +
+
+"<p><strong>ROI:</strong> " +
+roi.toFixed(2) +
+"%</p>";
+
+}
+
+</script>
+
+</body>
+  </html>
