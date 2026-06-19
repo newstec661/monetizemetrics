@@ -265,3 +265,38 @@ a {
 
 .button:hover {
     opacity: 0.9;
+.calculator-box{
+
+max-width:600px;
+margin:30px auto;
+padding:30px;
+background:#f8fafc;
+border-radius:12px;
+border:1px solid #e2e8f0;
+}
+
+.calculator-box input{
+
+width:100%;
+padding:12px;
+border:1px solid #cbd5e1;
+border-radius:8px;
+font-size:16px;
+box-sizing:border-box;
+}
+
+#result{
+
+max-width:600px;
+margin:30px auto;
+padding:25px;
+background:#eff6ff;
+border-radius:12px;
+border:1px solid #93c5fd;
+}
+
+#result h2{
+
+margin-top:0;
+
+}
