@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>RPM Calculator - MonetizeMetrics</title><meta name="description" content="Free RPM Calculator. Calculate Revenue Per Mille and estimate earnings."><link rel="stylesheet" href="../css/style.css"></head><body><header><nav><div class="logo">
+<img src="../images/logo.png" alt="MonetizeMetrics Logo">
+<span>MonetizeMetrics</span>
+</div><ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul></nav></header><section class="content-section"><h1>RPM Calculator</h1><p>
+Calculate your RPM based on revenue and impressions.
+</p><div class="calculator-box"><label>Total Revenue ($)</label>
+<br>
+<input type="number" id="revenue" placeholder="500">
+<br><br>
+
+<label>Total Impressions</label>
+<br>
+<input type="number" id="impressions" placeholder="100000">
+<br><br>
+
+<button onclick="calculateRPM()" class="button">
+Calculate RPM
+</button></div><div id="result"></div></section><section class="content-section"><h2>What is RPM?</h2><p>
+RPM (Revenue Per Mille) represents how much revenue you earn for every 1,000 impressions.
+Unlike CPM, RPM reflects your actual earnings.
+</p><h2>RPM Formula</h2><p>
+RPM = (Revenue ÷ Impressions) × 1000
+</p></section><section class="content-section"><h2>Frequently Asked Questions</h2><h3>What is a good RPM?</h3><p>
+A good RPM varies by niche, traffic quality and country.
+</p><h3>Why is RPM different from CPM?</h3><p>
+CPM measures advertiser cost while RPM measures publisher revenue.
+</p></section><footer><p>
+© 2026 MonetizeMetrics. All rights reserved.
+</p></footer><script>
+
+function calculateRPM(){
+
+let revenue =
+parseFloat(document.getElementById("revenue").value);
+
+let impressions =
+parseFloat(document.getElementById("impressions").value);
+
+if(isNaN(revenue) || isNaN(impressions)){
+
+document.getElementById("result").innerHTML =
+"<p>Please fill all fields.</p>";
+
+return;
+
+}
+
+let rpm =
+(revenue / impressions) * 1000;
+
+document.getElementById("result").innerHTML =
+
+"<h2>Your RPM</h2>" +
+
+"<p><strong>RPM:</strong> $" +
+rpm.toFixed(2) +
+"</p>";
+
+}
+
+</script></body>
+  </html>
