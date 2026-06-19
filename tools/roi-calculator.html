@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ROI Calculator - MonetizeMetrics</title><meta name="description" content="Free ROI Calculator. Calculate your Return on Investment and evaluate profitability."><link rel="stylesheet" href="../css/style.css"></head><body><header><nav><div class="logo">
+<img src="../images/logo.png" alt="MonetizeMetrics Logo">
+<span>MonetizeMetrics</span>
+</div><ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul></nav></header><section class="content-section"><h1>ROI Calculator</h1><p>
+Calculate your Return on Investment (ROI) and determine whether your investment is profitable.
+</p><div class="calculator-box"><label>Total Revenue ($)</label>
+<br>
+<input type="number" id="revenue" placeholder="1000">
+<br><br>
+
+<label>Total Cost ($)</label>
+<br>
+<input type="number" id="cost" placeholder="500">
+<br><br>
+
+<button onclick="calculateROI()" class="button">
+Calculate ROI
+</button></div><div id="result"></div></section><section class="content-section"><h2>What is ROI?</h2><p>
+ROI (Return on Investment) is a metric used to evaluate the profitability of an investment.
+It compares the profit generated with the amount invested.
+</p><h2>ROI Formula</h2><p>
+ROI = ((Revenue - Cost) ÷ Cost) × 100
+</p><h2>Example</h2><p>
+If you invest $500 and generate $1,000 in revenue,
+your ROI is 100%.
+</p></section><section class="content-section"><h2>Frequently Asked Questions</h2><h3>What is a good ROI?</h3><p>
+Generally, a positive ROI indicates profitability.
+Higher ROI percentages indicate better returns.
+</p><h3>Can ROI be negative?</h3><p>
+Yes. A negative ROI means the investment lost money.
+</p><h3>Why is ROI important?</h3><p>
+ROI helps businesses and marketers compare opportunities and make better financial decisions.
+</p></section><footer><p>
+© 2026 MonetizeMetrics. All rights reserved.
+</p></footer><script>
+
+function calculateROI(){
+
+let revenue =
+parseFloat(document.getElementById("revenue").value);
+
+let cost =
+parseFloat(document.getElementById("cost").value);
+
+if(isNaN(revenue) || isNaN(cost) || cost <= 0){
+
+document.getElementById("result").innerHTML =
+"<p>Please enter valid values.</p>";
+
+return;
+
+}
+
+let profit = revenue - cost;
+
+let roi = ((profit / cost) * 100);
+
+document.getElementById("result").innerHTML =
+
+"<h2>ROI Results</h2>" +
+
+"<p><strong>Profit:</strong> $" +
+profit.toFixed(2) +
+"</p>" +
+
+"<p><strong>ROI:</strong> " +
+roi.toFixed(2) +
+"%</p>";
+
+}
+
+</script></body>
+  </html>
