@@ -300,3 +300,12 @@ border:1px solid #93c5fd;
 margin-top:0;
 
 }
+
+.ad-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 100%;
+    overflow: hidden;
+}
